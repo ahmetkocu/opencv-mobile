@@ -11,7 +11,7 @@ env:
 
 jobs:
   setup:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     outputs:
       VERSION: ${{ steps.get_version.outputs.VERSION }}
     steps:
@@ -244,7 +244,7 @@ jobs:
         path: ${{ env.PACKAGENAME }}.zip
 
   ios-opencv4:
-    runs-on: macos-latest
+    runs-on: self-hosted
     env:
       OPENCV_VERSION: 4.5.4
       PACKAGENAME: opencv-mobile-4.5.4-ios
